@@ -15,11 +15,13 @@ class BinarySearchTree {
   }
 
   dfs(values = []) {
+    // If there is a left-hand branch then you recursively search the nodes there.
     if (this.left) {
       values = this.left.dfs(values);
     }
     values.push(this.value);
 
+    // recursively search the right-hand side branch
     if (this.right) {
       values = this.right.dfs(values);
     }
